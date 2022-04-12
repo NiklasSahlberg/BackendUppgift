@@ -1,4 +1,4 @@
-package com.example.backenduppgift;
+package com.example.backenduppgift.models;
 
 
 
