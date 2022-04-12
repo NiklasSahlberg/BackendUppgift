@@ -16,11 +16,11 @@ public class ShopController {
     Shop shop;
 
     @RequestMapping(value = "/ShopJSON", produces = "application/JSON")
-    public Shop enKompisJSON() {
+    public Shop enItemJSON() {
         return new Shop(1, "Fridge");
     }
 
-    // GET ALL KOMPISAR
+
     @RequestMapping("/items/")
     public List<Shop> index() {
         System.out.println(shopData);
@@ -54,9 +54,9 @@ public class ShopController {
 
         return shop;
     }
-    @RequestMapping("/kompisar/{id}/delete")
-    public Response deleteKompisById(@PathVariable("id") int id) {
-        Response res = new Response("Kompis borttagen.", Boolean.FALSE);
+    @RequestMapping("/items/{id}/delete")
+    public Response deleteItemById(@PathVariable("id") int id) {
+        Response res = new Response("Item deleted", Boolean.FALSE);
 
 
         int indexToRemove = -1;
@@ -75,10 +75,10 @@ public class ShopController {
         return res;
     }
 
-    @PostMapping("/kompis/add")
-    public Response addKompis(@RequestBody Shop i) {
+    @PostMapping("/items/add")
+    public Response addItem(@RequestBody Shop i) {
         System.out.println(i.getId() + " " + i.getNamn());
-        Response res = new Response("Kompis added", Boolean.FALSE);
+        Response res = new Response("Item added", Boolean.FALSE);
         shopData.add(i);
 
         res.setStatus(Boolean.TRUE);
@@ -86,3 +86,5 @@ public class ShopController {
         return res;
     }
 }
+
+//Test
