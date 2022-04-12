@@ -1,7 +1,7 @@
 package com.example.backenduppgift.controllers;
 
 import com.example.backenduppgift.models.Customer;
-import com.example.backenduppgift.models.CustomerDAO;
+import com.example.backenduppgift.dao.CustomerDAO;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

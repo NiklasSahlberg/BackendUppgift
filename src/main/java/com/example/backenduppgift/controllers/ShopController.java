@@ -2,7 +2,7 @@ package com.example.backenduppgift.controllers;
 
 import com.example.backenduppgift.models.Response;
 import com.example.backenduppgift.models.Shop;
-import com.example.backenduppgift.models.ShopDAO;
+import com.example.backenduppgift.dao.ShopDAO;
 import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;

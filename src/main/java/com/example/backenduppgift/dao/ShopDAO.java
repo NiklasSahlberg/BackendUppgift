@@ -1,6 +1,8 @@
-package com.example.backenduppgift.models;
+package com.example.backenduppgift.dao;
 
 
+
+import com.example.backenduppgift.models.Shop;
 
 import java.util.ArrayList;
 import java.util.List;
